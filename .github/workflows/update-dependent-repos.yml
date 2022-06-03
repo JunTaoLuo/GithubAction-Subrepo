@@ -1,11 +1,14 @@
 name: Testing
 on:
   workflow_dispatch:
-    branch:
-      required: true
-      options:
-      - 'main'
-      - 'dev'
+    inputs:
+      branch:
+        description: "Update branch"
+        type: choice
+        required: true
+        options:
+        - 'main'
+        - 'dev'
   push:
     branches:
     - 'main'
