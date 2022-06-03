@@ -28,7 +28,7 @@ jobs:
           client-payload: |
             {
               "source": "GithubAction-Subrepo",
-              "branch": "${{ github.event.inputs.branch }}",
+              "branch": "${{ github.event.inputs.branch }}"
             }
       - name: Dispatch update
         if: github.event_name == 'push'
@@ -40,5 +40,5 @@ jobs:
           client-payload: |
             {
               "source": "GithubAction-Subrepo",
-              "branch": "${{ github.ref }}",
+              "branch": "${{ github.ref_name }}"
             }
